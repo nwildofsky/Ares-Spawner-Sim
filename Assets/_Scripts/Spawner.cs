@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Pool;
 
-public class Spawner : MonoBehaviour
+public class Spawner : MonoBehaviour, ITouchable
 {
     // References
     [SerializeField]
     private SpawnerData data;
     public Transform spawnLocation;
+    public MeshRenderer debugRenderer;
+    private Material debugDefault;
+    public Material debugAccel;
+    public Material debugCooldown;
 
     // Object pool
     private ObjectPool<Agent> pool;
@@ -28,6 +33,8 @@ public class Spawner : MonoBehaviour
     {
         pool = new ObjectPool<Agent>(CreateAgent, OnGetFromPool, OnReleaseFromPool, OnDestroyPooledObject,
             false, data.defaultPoolSize, data.maxPoolSize);
+
+        debugDefault = debugRenderer.material;
     }
 
     private void Start()
@@ -108,6 +115,8 @@ public class Spawner : MonoBehaviour
         spawnTimer = 0f;
         timingIdx = 0;
         acceleratedCooldownTimer = 0f;
+
+        debugRenderer.material = debugAccel;
     }
 
     private void DecelerateAfterTimer()
@@ -129,6 +138,8 @@ public class Spawner : MonoBehaviour
         spawnTimer = 0f;
         timingIdx = 0;
         acceleratedDurationTimer = 0f;
+
+        debugRenderer.material = debugCooldown;
     }
 
     private void EndCooldownAfterTimer()
@@ -147,6 +158,19 @@ public class Spawner : MonoBehaviour
 
         InCooldown = false;
         acceleratedCooldownTimer = 0f;
+
+        debugRenderer.material = debugDefault;
+    }
+    #endregion
+
+    #region Event Handlers
+    public void HandleTouch()
+    {
+        Accelerate();
+
+        Debug.Log($"{this.name} was touched!");
+
+        EventManager.Game.OnTouchSpawner?.Invoke();
     }
     #endregion
 

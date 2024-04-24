@@ -16,10 +16,12 @@ MonoBehaviour:
     type: 3}
   defaultPoolSize: 50
   maxPoolSize: 100
+  maxSizeIsHardLimit: 1
   spawnOnPlay: 1
   spawnDelay: 0
   spawnTimings:
   - 3
-  acceleratedSpawnTimings: []
-  acceleratedDuration: 3
+  acceleratedSpawnTimings:
+  - 1
+  acceleratedDuration: 7
   acceleratedCooldown: 5

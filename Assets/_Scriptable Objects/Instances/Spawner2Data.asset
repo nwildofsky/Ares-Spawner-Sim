@@ -21,6 +21,7 @@ MonoBehaviour:
   spawnDelay: 0
   spawnTimings:
   - 3
-  acceleratedSpawnTimings: []
-  acceleratedDuration: 3
+  acceleratedSpawnTimings:
+  - 1
+  acceleratedDuration: 7
   acceleratedCooldown: 5
