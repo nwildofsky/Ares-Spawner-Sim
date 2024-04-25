@@ -20,6 +20,6 @@ public class SpawnerData : ScriptableObject
 
     [Header("Accelerated Spawn Properties")]
     public List<float> acceleratedSpawnTimings;
-    public float acceleratedDuration = 3f;
+    public float acceleratedDuration = 7f;
     public float acceleratedCooldown = 5f;
 }

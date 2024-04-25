@@ -90,12 +90,12 @@ public class Spawner : MonoBehaviour, ITouchable
     {
         if (spawnTimer > timings[timingIdx])
         {
-            Spawn();
+            Spawn(timings);
         }
         spawnTimer += Time.deltaTime;
     }
 
-    private void Spawn()
+    private void Spawn(List<float> timings)
     {
         if (!IsSpawning)
             return;
@@ -103,7 +103,7 @@ public class Spawner : MonoBehaviour, ITouchable
         PoolGetWithinLimit();
 
         spawnTimer = 0f;
-        timingIdx = (timingIdx + 1) % data.spawnTimings.Count;
+        timingIdx = (timingIdx + 1) % timings.Count;
     }
 
     public void Accelerate()

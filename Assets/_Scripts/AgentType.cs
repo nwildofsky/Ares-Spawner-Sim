@@ -4,8 +4,8 @@ using UnityEngine;
 
 public enum AgentType
 {
-    Agent1,
-    Agent2,
-    Agent3,
-    Agent4,
+    Bat,
+    Crab,
+    Salamander,
+    Spider,
 }

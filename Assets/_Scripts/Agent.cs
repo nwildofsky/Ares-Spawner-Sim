@@ -14,7 +14,7 @@ public class Agent : MonoBehaviour
     private Action<Agent> collideSpawnAction;
     private Action<Agent> collideDestroyAction;
     //private bool hasCollided = true;
-    public bool HasCollided { get; set; }
+    public bool ReadyToCollide { get; set; }
 
     public void SetActions(Action<Agent> spawnAction, Action<Agent> destroyAction)
     {
@@ -33,13 +33,18 @@ public class Agent : MonoBehaviour
             navAgent.acceleration = data.acceleration;
             navAgent.stoppingDistance = data.stoppingDistance;
             navAgent.autoBraking = data.autoBraking;
+
+            navAgent.radius = data.radius;
+            navAgent.height = data.height;
+            navAgent.obstacleAvoidanceType = data.obstacleAvoidanceType;
+            navAgent.avoidancePriority = data.priority;
         }
     }
 
     private void Start()
     {
         // Initially activate collisions with a delay after instantiation
-        Invoke("SetHasNotCollided", data.startupCollisionDelay);
+        Invoke(nameof(SetReadyToCollide), data.startupCollisionDelay);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -49,10 +54,10 @@ public class Agent : MonoBehaviour
             // Collision of similar agents
             if (otherAgent.Type == Type)
             {
-                if (!HasCollided && !otherAgent.HasCollided)
+                if (ReadyToCollide && otherAgent.ReadyToCollide)
                 {
-                    otherAgent.HasCollided = true;
-                    HasCollided = true;
+                    otherAgent.ReadyToCollide = false;
+                    ReadyToCollide = false;
 
                     // Set new destinations for after collision
                     ResetNavigation();
@@ -68,18 +73,20 @@ public class Agent : MonoBehaviour
                 // Destroy both objects
                 collideDestroyAction?.Invoke(this);
             }
+
+            ReadyToCollide = false;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
         // Activate collisions again with a delay after the last collision
-        Invoke("SetHasNotCollided", data.exitTriggerCollisionDelay);
+        Invoke(nameof(SetReadyToCollide), data.exitTriggerCollisionDelay);
     }
 
-    private void SetHasNotCollided()
+    private void SetReadyToCollide()
     {
-        HasCollided = false;
+        ReadyToCollide = true;
     }
 
     public void ResetNavigation()

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c218f7285a82174ca6461f9100f6839, type: 3}
-  m_Name: Spawner2Data
+  m_Name: BatSpawnerData
   m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 7270031100374398013, guid: 5830960d5029ed949a8c31da8310a3fc,
+  prefabToSpawn: {fileID: 1761609371945136264, guid: 6f1f691531c40f04aacd388b672d19be,
     type: 3}
   defaultPoolSize: 50
   maxPoolSize: 100
@@ -20,8 +20,9 @@ MonoBehaviour:
   spawnOnPlay: 1
   spawnDelay: 0
   spawnTimings:
+  - 2
   - 3
   acceleratedSpawnTimings:
-  - 1
-  acceleratedDuration: 7
-  acceleratedCooldown: 5
+  - 0.5
+  acceleratedDuration: 3
+  acceleratedCooldown: 7
