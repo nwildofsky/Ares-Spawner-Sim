@@ -73,3 +73,4 @@ crashlytics-build.properties
 
 # Added Full Assets Packs
 /[Aa]ssets/RPGMonsterBundlePBR*
+/[Aa]ssets/Modern UI*
