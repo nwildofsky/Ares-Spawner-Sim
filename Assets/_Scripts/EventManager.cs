@@ -9,4 +9,11 @@ public static class EventManager
     {
         public static UnityAction OnTouchSpawner;
     }
+
+    public struct UI
+    {
+        public static UnityAction<AgentType, int> OnAgentCountChanged;
+        public static UnityAction OnAgentCountHeard;
+    }
+
 }

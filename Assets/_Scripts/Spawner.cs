@@ -194,6 +194,8 @@ public class Spawner : MonoBehaviour, ITouchable
     private void OnGetFromPool(Agent agent)
     {
         agent.gameObject.SetActive(true);
+
+        EventManager.UI.OnAgentCountChanged?.Invoke(data.prefabToSpawn.Type, pool.CountActive);
     }
 
     private void OnReleaseFromPool(Agent agent)
@@ -201,6 +203,8 @@ public class Spawner : MonoBehaviour, ITouchable
         agent.transform.position = spawnLocation.position;
         agent.transform.rotation = spawnLocation.rotation;
         agent.gameObject.SetActive(false);
+
+        EventManager.UI.OnAgentCountChanged?.Invoke(data.prefabToSpawn.Type, pool.CountActive - 1);
     }
 
     private void OnDestroyPooledObject(Agent agent)
