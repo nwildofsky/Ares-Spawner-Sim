@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Xml.Serialization;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
@@ -45,17 +46,21 @@ public class InputManager : MonoBehaviour
 
     private void CalculateTouch(InputAction.CallbackContext context)
     {
-        // TODO: Check first if click hits a piece of UI
+        Vector2 touchPos = TouchPositionAction.ReadValue<Vector2>();
 
-        if (DidPressHitTouchable(out ITouchable t))
+        // Check first if click hits a piece of UI
+        // Not able to hit touchables that are under UI elements
+        if (DidPressHitUI(touchPos))
+            return;
+
+        if (DidPressHitTouchable(touchPos, out ITouchable t))
         {
             t.HandleTouch();
         }
     }
 
-    private bool DidPressHitTouchable(out ITouchable touchedObj)
+    private bool DidPressHitTouchable(Vector2 touchPos, out ITouchable touchedObj)
     {
-        Vector2 touchPos = TouchPositionAction.ReadValue<Vector2>();
         Ray ray = Camera.main.ScreenPointToRay(touchPos);
         LayerMask mask = LayerMask.GetMask("Touchable");
         if (Physics.Raycast(ray, out RaycastHit hit, 100, mask))
@@ -69,5 +74,14 @@ public class InputManager : MonoBehaviour
 
         touchedObj = null;
         return false;
+    }
+
+    private bool DidPressHitUI(Vector2 touchPos)
+    {
+        PointerEventData ped = new PointerEventData(EventSystem.current);
+        ped.position = new Vector2(touchPos.x, touchPos.y);
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(ped, results);
+        return results.Count > 0;
     }
 }
