@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c218f7285a82174ca6461f9100f6839, type: 3}
   m_Name: SpiderSpawnerData
   m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 7270031100374398013, guid: c836c93935ac4cb48a05695517a7d065,
+  prefabToSpawn: {fileID: 7270031100374398013, guid: 1a42c12b6c4a7ee4695dabb8bfaad36e,
     type: 3}
   defaultPoolSize: 50
   maxPoolSize: 100

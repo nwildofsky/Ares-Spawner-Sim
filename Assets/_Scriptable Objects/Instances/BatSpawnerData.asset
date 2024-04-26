@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c218f7285a82174ca6461f9100f6839, type: 3}
   m_Name: BatSpawnerData
   m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 1761609371945136264, guid: 6f1f691531c40f04aacd388b672d19be,
+  prefabToSpawn: {fileID: 1761609371945136264, guid: 5b9c34c1cbd4a4348bfd3e81f0de67d2,
     type: 3}
   defaultPoolSize: 50
   maxPoolSize: 100
