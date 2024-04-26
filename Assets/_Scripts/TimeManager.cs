@@ -20,7 +20,10 @@ public class TimeManager : MonoBehaviour
 
     private void Update()
     {
-        GameTime += Time.deltaTime;
+        if (!isGameRunning)
+        {
+            GameTime += Time.deltaTime;
+        }
     }
 
     public static void SetTimeScale(float timeScale)
