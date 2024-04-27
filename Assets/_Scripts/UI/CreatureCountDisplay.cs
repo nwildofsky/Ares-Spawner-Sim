@@ -9,6 +9,7 @@ public class CreatureCountDisplay : MonoBehaviour
     public AgentType type;
     public RectTransform progressBar;
     public float minWidth;
+    public float stablePercentWidth;
     public float maxWidth;
 
     private void Awake()
@@ -47,6 +48,13 @@ public class CreatureCountDisplay : MonoBehaviour
             default: break;
         }
 
-        progressBar.sizeDelta = new Vector2(Mathf.SmoothStep(minWidth, maxWidth, percentage), progressBar.sizeDelta.y);
+        if (percentage <= .25f)
+        {
+            progressBar.sizeDelta = new Vector2(Mathf.Lerp(minWidth, stablePercentWidth, percentage / 0.25f), progressBar.sizeDelta.y);
+        }
+        else if (percentage > 0.25f)
+        {
+            progressBar.sizeDelta = new Vector2(Mathf.Lerp(stablePercentWidth, maxWidth, percentage), progressBar.sizeDelta.y);
+        }
     }
 }

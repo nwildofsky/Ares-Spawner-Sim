@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -113.59, y: 0}
-  m_SizeDelta: {x: 255.39, y: 50}
+  m_AnchoredPosition: {x: -141.8, y: 0}
+  m_SizeDelta: {x: 283.6, y: 50}
   m_Pivot: {x: 0.00000015180558, y: 0.5}
 --- !u!222 &3228567290363363441
 CanvasRenderer:
@@ -348,8 +348,9 @@ MonoBehaviour:
   data: {fileID: 0}
   type: 0
   progressBar: {fileID: 3945059560811443658}
-  minWidth: 23.973
-  maxWidth: 255.39
+  minWidth: 51.3231
+  stablePercentWidth: 191.8
+  maxWidth: 283.6
 --- !u!225 &8830119731051729253
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -392,8 +393,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3945059560811443658}
   - {fileID: 4417724678626328577}
+  - {fileID: 3945059560811443658}
   m_Father: {fileID: 8673872038048889937}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
