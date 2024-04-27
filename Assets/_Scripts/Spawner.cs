@@ -10,10 +10,13 @@ public class Spawner : MonoBehaviour, ITouchable
     [SerializeField]
     private SpawnerData data;
     public Transform spawnLocation;
-    public MeshRenderer debugRenderer;
-    private Material debugDefault;
-    public Material debugAccel;
-    public Material debugCooldown;
+    //public MeshRenderer debugRenderer;
+    //private Material debugDefault;
+    //public Material debugAccel;
+    //public Material debugCooldown;
+    public ParticleSystem touchableSFX;
+    public ParticleSystem acceleratedSFX;
+    public ParticleSystem cooldownSFX;
 
     // Object pool
     private ObjectPool<Agent> pool;
@@ -34,13 +37,16 @@ public class Spawner : MonoBehaviour, ITouchable
         pool = new ObjectPool<Agent>(CreateAgent, OnGetFromPool, OnReleaseFromPool, OnDestroyPooledObject,
             false, data.defaultPoolSize, data.maxPoolSize);
 
-        debugDefault = debugRenderer.material;
+        //debugDefault = debugRenderer.material;
     }
 
     private void Start()
     {
         if (data.spawnOnPlay)
+        {
             IsSpawning = true;
+            touchableSFX.Play();
+        }
 
         timingIdx = 0;
         spawnTimer = 0f;
@@ -57,6 +63,7 @@ public class Spawner : MonoBehaviour, ITouchable
             {
                 IsSpawning = true;
                 spawnTimer = 0f;
+                touchableSFX.Play();
             }
             spawnTimer += Time.deltaTime;
         }
@@ -116,7 +123,9 @@ public class Spawner : MonoBehaviour, ITouchable
         timingIdx = 0;
         acceleratedCooldownTimer = 0f;
 
-        debugRenderer.material = debugAccel;
+        //debugRenderer.material = debugAccel;
+        acceleratedSFX.Play();
+        touchableSFX.Stop();
     }
 
     private void DecelerateAfterTimer()
@@ -139,7 +148,9 @@ public class Spawner : MonoBehaviour, ITouchable
         timingIdx = 0;
         acceleratedDurationTimer = 0f;
 
-        debugRenderer.material = debugCooldown;
+        //debugRenderer.material = debugCooldown;
+        cooldownSFX.Play();
+        acceleratedSFX.Stop();
     }
 
     private void EndCooldownAfterTimer()
@@ -159,7 +170,9 @@ public class Spawner : MonoBehaviour, ITouchable
         InCooldown = false;
         acceleratedCooldownTimer = 0f;
 
-        debugRenderer.material = debugDefault;
+        //debugRenderer.material = debugDefault;
+        touchableSFX.Play();
+        cooldownSFX.Stop();
     }
     #endregion
 
