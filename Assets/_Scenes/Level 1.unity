@@ -707,6 +707,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Cliff_Veins_02_Copper
       objectReference: {fileID: 0}
+    - target: {fileID: 5734860280716724089, guid: 4e2890ff4cae2b54c9ded1318897c0e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -730,6 +735,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070208615515283184, guid: 66329259981fb514d8862baa8b2b1b5e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5070208615515283185, guid: 66329259981fb514d8862baa8b2b1b5e,
         type: 3}
@@ -889,6 +899,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Cliff_Veins_02_Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 978927914784490331, guid: 0c87b57e3a1bbd94ba9b0fe32f6bd4d1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1065,7 +1080,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &98787412
 Transform:
@@ -1182,6 +1197,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Cliff_Veins_03_Green (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7651080962414151491, guid: f11ce4fb8c26cb242991408f81e42290,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1363,6 +1383,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Rock_Veins_01_Red
+      objectReference: {fileID: 0}
+    - target: {fileID: 2849162021912457623, guid: 188bc7613fee6554489d3dc0daa4760f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2849162021912948151, guid: 188bc7613fee6554489d3dc0daa4760f,
         type: 3}
@@ -1646,6 +1671,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871866755756758409, guid: b5b2c3fce9c140749bdfd3c99ed2918e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3211413110821932851, guid: b5b2c3fce9c140749bdfd3c99ed2918e,
         type: 3}
@@ -2180,7 +2210,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &194994049
 Transform:
@@ -2284,6 +2314,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Rock_Veins_03_Red
       objectReference: {fileID: 0}
+    - target: {fileID: 3222752430393349954, guid: 9c9238cf55ae86842aed8cc01af6310a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5975057379094155670, guid: 9c9238cf55ae86842aed8cc01af6310a,
         type: 3}
       propertyPath: m_Enabled
@@ -2377,6 +2412,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Rock_Gem_06_Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852474436876741319, guid: e97be7dbfd387d24a9f8da260231bd38,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5013553915767571160, guid: e97be7dbfd387d24a9f8da260231bd38,
         type: 3}
@@ -2738,6 +2778,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Crystal_Column_04_Copper
       objectReference: {fileID: 0}
+    - target: {fileID: 3051078178850112623, guid: 4cbc0623ef6778d49bf6e96dd24655d4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2766,6 +2811,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_06
+      objectReference: {fileID: 0}
+    - target: {fileID: 7376831991354022766, guid: 86399676beee243439d06fc0c3339e4a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7859930546490868180, guid: 86399676beee243439d06fc0c3339e4a,
         type: 3}
@@ -2925,6 +2975,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Rock_Veins_03_Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 8056517402313395727, guid: 21c86517dc0da7240b8bd848a585bd31,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3450,7 +3505,7 @@ GameObject:
   - component: {fileID: 361115230}
   - component: {fileID: 361115231}
   m_Layer: 0
-  m_Name: InputManager
+  m_Name: Input Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3464,12 +3519,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 361115227}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 545510794}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &361115231
 MonoBehaviour:
@@ -4375,10 +4430,10 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.75
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -4408,7 +4463,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -4469,6 +4524,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Cave_Wall_Curved_Veins_03_Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 2687586113691019386, guid: 2de7b5728d38ccc4f83dadec2772a8c3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2687586113691019387, guid: 2de7b5728d38ccc4f83dadec2772a8c3,
         type: 3}
@@ -4613,6 +4673,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Cliff_Veins_03_Green
+      objectReference: {fileID: 0}
+    - target: {fileID: 7651080962414151491, guid: f11ce4fb8c26cb242991408f81e42290,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4872,6 +4937,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Cliff_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049164739500208466, guid: 7c8d44f58fa31be4ab6520adf3ad26fa,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7049164739500208469, guid: 7c8d44f58fa31be4ab6520adf3ad26fa,
         type: 3}
@@ -5227,6 +5297,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Stone_Crystal_02_Red
       objectReference: {fileID: 0}
+    - target: {fileID: 2300257742664245746, guid: 4649fd84f4c9fd54e9a2c5476588445d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2300257742664744402, guid: 4649fd84f4c9fd54e9a2c5476588445d,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -5348,7 +5423,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960.23444, y: 0}
+  m_AnchoredPosition: {x: 960.2528, y: 0}
   m_SizeDelta: {x: 826, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &490018740
@@ -5424,7 +5499,7 @@ GameObject:
   - component: {fileID: 508455144}
   - component: {fileID: 508455143}
   m_Layer: 0
-  m_Name: TimeManager
+  m_Name: Time Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5442,6 +5517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff42eaedc2b488741aa54d6de3d376d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startGameTimeOnPlay: 1
 --- !u!4 &508455144
 Transform:
   m_ObjectHideFlags: 0
@@ -5450,12 +5526,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508455142}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 545510794}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &533754647
 GameObject:
@@ -5792,6 +5868,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Rock_Pile_04
       objectReference: {fileID: 0}
+    - target: {fileID: 5598848682302089097, guid: 327a1321075509e418f340e47116aea2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5598848682302089098, guid: 327a1321075509e418f340e47116aea2,
         type: 3}
       propertyPath: m_Enabled
@@ -5808,6 +5889,40 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 544761109}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &545510793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 545510794}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &545510794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545510793}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 361115230}
+  - {fileID: 508455144}
+  - {fileID: 1751686335}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &564821254
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5825,6 +5940,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Crystal_Cluster_05_Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 494717902614397550, guid: 91a237e205bb2bb4da6a6d21d5962114,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 979049010019686612, guid: 91a237e205bb2bb4da6a6d21d5962114,
         type: 3}
@@ -6295,6 +6415,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Rock_Pile_09
       objectReference: {fileID: 0}
+    - target: {fileID: 7492581652825783212, guid: 225f938ff0743ec4d960745fc27eca52,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7492581652825783215, guid: 225f938ff0743ec4d960745fc27eca52,
         type: 3}
       propertyPath: m_Enabled
@@ -6394,6 +6519,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Cliff_Veins_03_Copper (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5136383705680152113, guid: 815089ea35a914841911a10ea91d5d47,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5477443023104892043, guid: 815089ea35a914841911a10ea91d5d47,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -6482,6 +6612,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_06
+      objectReference: {fileID: 0}
+    - target: {fileID: 7376831991354022766, guid: 86399676beee243439d06fc0c3339e4a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7859930546490868180, guid: 86399676beee243439d06fc0c3339e4a,
         type: 3}
@@ -7516,6 +7651,7 @@ GameObject:
   - component: {fileID: 719920465}
   - component: {fileID: 719920464}
   - component: {fileID: 719920463}
+  - component: {fileID: 719920466}
   m_Layer: 0
   m_Name: Event System
   m_TagString: Untagged
@@ -7606,6 +7742,19 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
+--- !u!114 &719920466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719920461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d007d6c1df61fb648b3a9c53719c4120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  window: {fileID: 2134555284}
 --- !u!1 &727405127
 GameObject:
   m_ObjectHideFlags: 0
@@ -8126,6 +8275,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Cave_Wall_Even_Veins_05_Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 4406393227998746647, guid: 663048c7f0ad91f4cbcf8463b23751d2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8779,6 +8933,7 @@ GameObject:
   - component: {fileID: 815646816}
   - component: {fileID: 815646815}
   - component: {fileID: 815646814}
+  - component: {fileID: 815646817}
   m_Layer: 5
   m_Name: Final Time
   m_TagString: Untagged
@@ -8917,6 +9072,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 815646812}
   m_CullTransparentMesh: 1
+--- !u!114 &815646817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815646812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e61a8869af24f049bde393079f34e4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -9272,6 +9439,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Rock_Veins_02_Green
       objectReference: {fileID: 0}
+    - target: {fileID: 4270774384224349704, guid: 4425330e0a670354791d125985401cf5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7649101228679504715, guid: 4425330e0a670354791d125985401cf5,
         type: 3}
       propertyPath: m_Enabled
@@ -9552,6 +9724,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Crystal_Cluster_05_Copper
       objectReference: {fileID: 0}
+    - target: {fileID: 2682608245092944276, guid: 6bb5cc204132c844392f39bd173ea588,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2682608245092944277, guid: 6bb5cc204132c844392f39bd173ea588,
         type: 3}
       propertyPath: m_Enabled
@@ -9812,6 +9989,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Crystal_Cluster_01_Green
       objectReference: {fileID: 0}
+    - target: {fileID: 3327544446464822640, guid: 36bdd868a0834cd4c8b7f50f8292cc1b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3327544446464822643, guid: 36bdd868a0834cd4c8b7f50f8292cc1b,
         type: 3}
       propertyPath: m_Enabled
@@ -9845,6 +10027,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Mountain_Cave_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871839870895622898, guid: 0bb6ac9aa1ed208478a51fdea5c5560c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3211351896341729352, guid: 0bb6ac9aa1ed208478a51fdea5c5560c,
         type: 3}
@@ -10021,6 +10208,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Stone_Veins_02_Green
       objectReference: {fileID: 0}
+    - target: {fileID: 4919020147639348133, guid: 80b0718c16abae64e8a802e53b1ec603,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4919020147639842693, guid: 80b0718c16abae64e8a802e53b1ec603,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -10116,7 +10308,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &930549124
 Transform:
@@ -10164,6 +10356,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Crystal_Cluster_02_Green
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822266312252087535, guid: a8ef5a91dea18f144bde971057294c34,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4485790120947615317, guid: a8ef5a91dea18f144bde971057294c34,
         type: 3}
@@ -10255,7 +10452,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &937169898
 Transform:
@@ -10497,6 +10694,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Cave_Wall_Curved_Corner_Veins_01_Blue
       objectReference: {fileID: 0}
+    - target: {fileID: 1968804069836976155, guid: efe4a8fb32273a5498ce3ba4b66a7112,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10520,6 +10722,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Crystal_Cluster_05_Green
+      objectReference: {fileID: 0}
+    - target: {fileID: 8242311845354058788, guid: edc3165b9741e3045bf70e818e3206a9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8242311845354058789, guid: edc3165b9741e3045bf70e818e3206a9,
         type: 3}
@@ -11278,6 +11485,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Mountain_Cave_06
       objectReference: {fileID: 0}
+    - target: {fileID: 7273756044120589651, guid: 619d859efccc57a4893c7f632d1b6a67,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7273756044120589652, guid: 619d859efccc57a4893c7f632d1b6a67,
         type: 3}
       propertyPath: m_Enabled
@@ -11436,6 +11648,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Crystal_Column_03_Red
+      objectReference: {fileID: 0}
+    - target: {fileID: 7575110549147838656, guid: 652ac65511cce464eb088a744c02f266,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7575110549147838657, guid: 652ac65511cce464eb088a744c02f266,
         type: 3}
@@ -11683,6 +11900,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Stones_Crystals_01_Red
+      objectReference: {fileID: 0}
+    - target: {fileID: 2344197590067692442, guid: a06191e47469c324a8207881f930b4c3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2344197590067692445, guid: a06191e47469c324a8207881f930b4c3,
         type: 3}
@@ -12646,6 +12868,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Crystal_Column_04_Blue
       objectReference: {fileID: 0}
+    - target: {fileID: 1283630200712734370, guid: f530c64cf760e1444a8b5d5fd168b2fe,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1917282683478768664, guid: f530c64cf760e1444a8b5d5fd168b2fe,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -13506,6 +13733,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Rock_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 3898907535230693562, guid: b048c1c1b77066e42aaa432320eecb38,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4418140165075413504, guid: b048c1c1b77066e42aaa432320eecb38,
         type: 3}
@@ -14642,6 +14874,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Cliff_Veins_01_Red
       objectReference: {fileID: 0}
+    - target: {fileID: 1309855880671178670, guid: d9383d616ac001f49b44e43fd7219686,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1830249629639046420, guid: d9383d616ac001f49b44e43fd7219686,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -14828,6 +15065,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Cave_Wall_Curved_Corner_Veins_04_Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 539154051184966159, guid: 03f24877bc78f5140bbd1aa51e440420,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 878383812200358069, guid: 03f24877bc78f5140bbd1aa51e440420,
         type: 3}
@@ -15450,6 +15692,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Cliff_Veins_03_Copper
       objectReference: {fileID: 0}
+    - target: {fileID: 5136383705680152113, guid: 815089ea35a914841911a10ea91d5d47,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5477443023104892043, guid: 815089ea35a914841911a10ea91d5d47,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -15533,6 +15780,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Cliff_Veins_03_Blue (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5963989172101894649, guid: 935c47bc0130b0a449abfe926a17a4fd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5963989172101894654, guid: 935c47bc0130b0a449abfe926a17a4fd,
         type: 3}
@@ -15911,6 +16163,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Cliff_Veins_03_Green (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7651080962414151491, guid: f11ce4fb8c26cb242991408f81e42290,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16036,6 +16293,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Mountain_Cave_02
       objectReference: {fileID: 0}
+    - target: {fileID: 29547324852795163, guid: 7efd8bd8dbd85204ba79d5b2811e9cd1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 802530849325690273, guid: 7efd8bd8dbd85204ba79d5b2811e9cd1,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -16118,6 +16380,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070208615515283184, guid: 66329259981fb514d8862baa8b2b1b5e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5070208615515283185, guid: 66329259981fb514d8862baa8b2b1b5e,
         type: 3}
@@ -16428,6 +16695,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Crystal_Column_04_Green
       objectReference: {fileID: 0}
+    - target: {fileID: 8867443635704441773, guid: 9f3471ce0af1d09429b347395b8e4e95,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8867443635704441774, guid: 9f3471ce0af1d09429b347395b8e4e95,
         type: 3}
       propertyPath: m_Enabled
@@ -16536,6 +16808,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Stone Wall_Veins_02_Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 8302582772061653709, guid: 97a2093bea782d340bd1155af5c4eff5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8302582772061755117, guid: 97a2093bea782d340bd1155af5c4eff5,
         type: 3}
@@ -16752,6 +17029,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Cliff_Veins_01_Green (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115747125607430003, guid: bf5fe1aa16feb5640ad39edf99331e9e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6887322381841477065, guid: bf5fe1aa16feb5640ad39edf99331e9e,
         type: 3}
@@ -17169,6 +17451,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Cliff_Veins_01_Green (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115747125607430003, guid: bf5fe1aa16feb5640ad39edf99331e9e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6887322381841477065, guid: bf5fe1aa16feb5640ad39edf99331e9e,
         type: 3}
@@ -17859,6 +18146,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Stone_Crystal_02_Green
       objectReference: {fileID: 0}
+    - target: {fileID: 6798675866391031663, guid: a9510a678401fb14ea1352e93b8ffcfe,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6798675866391262031, guid: a9510a678401fb14ea1352e93b8ffcfe,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -18119,6 +18411,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Rock_Pile_08
       objectReference: {fileID: 0}
+    - target: {fileID: 8043622126359842809, guid: eedbf05c425339944ba7ec75a2c01e20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18290,6 +18587,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 508455143}
+        m_TargetAssemblyTypeName: TimeManager, Assembly-CSharp
+        m_MethodName: SetTimeScale
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1751686336}
+        m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
+        m_MethodName: ReloadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDoubleClick:
     m_PersistentCalls:
       m_Calls: []
@@ -18327,6 +18648,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Stone_Veins_03_Green
+      objectReference: {fileID: 0}
+    - target: {fileID: 6107941331749933657, guid: 3a4def827fb9d664daa1900e79dee245,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6107941331750227577, guid: 3a4def827fb9d664daa1900e79dee245,
         type: 3}
@@ -18517,6 +18843,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Crystal_Cluster_06_Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3408415343213261544, guid: e92632f9952f5194585ffa3b9ef6c268,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3408415343213261545, guid: e92632f9952f5194585ffa3b9ef6c268,
         type: 3}
@@ -18963,6 +19294,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Cliff_Veins_01_Copper
+      objectReference: {fileID: 0}
+    - target: {fileID: 4362576658891585364, guid: 5d67f76ba17dede4c939fc3b4c3ec170,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4362576658891585387, guid: 5d67f76ba17dede4c939fc3b4c3ec170,
         type: 3}
@@ -19668,7 +20004,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1665475388
 Transform:
@@ -19711,6 +20047,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Rock_Gem_06_Copper
+      objectReference: {fileID: 0}
+    - target: {fileID: 4957149935120720027, guid: 8164dbba91667774881e7ddae0955776,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4957149935121153211, guid: 8164dbba91667774881e7ddae0955776,
         type: 3}
@@ -20264,6 +20605,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Rock_Gem_04_Copper
       objectReference: {fileID: 0}
+    - target: {fileID: 853059073128070044, guid: e5b0d3072a725ad4caa69a7f7c233f0b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 853059073128490940, guid: e5b0d3072a725ad4caa69a7f7c233f0b,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -20495,6 +20841,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729730816}
   m_CullTransparentMesh: 0
+--- !u!1 &1751686334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1751686335}
+  - component: {fileID: 1751686336}
+  m_Layer: 0
+  m_Name: Scene Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1751686335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751686334}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 545510794}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1751686336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751686334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a6aa1ec0f9e434429723c1e4b7c5871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1777628350
 GameObject:
   m_ObjectHideFlags: 0
@@ -20671,6 +21061,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Rock_Pile_08
       objectReference: {fileID: 0}
+    - target: {fileID: 8043622126359842809, guid: eedbf05c425339944ba7ec75a2c01e20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20754,6 +21149,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Cliff_Veins_02_Blue (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 978927914784490331, guid: 0c87b57e3a1bbd94ba9b0fe32f6bd4d1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21121,6 +21521,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 5598848682302089097, guid: 327a1321075509e418f340e47116aea2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5598848682302089098, guid: 327a1321075509e418f340e47116aea2,
         type: 3}
@@ -21525,6 +21930,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 435422398}
     m_Modifications:
+    - target: {fileID: 778377707129158553, guid: f03ebce0b14075542866aac76dbbf7dc,
+        type: 3}
+      propertyPath: data
+      value: 
+      objectReference: {fileID: 6705779648777776640}
+    - target: {fileID: 855978764570720267, guid: f03ebce0b14075542866aac76dbbf7dc,
+        type: 3}
+      propertyPath: data
+      value: 
+      objectReference: {fileID: 6705779648777776640}
     - target: {fileID: 2043678041225584994, guid: f03ebce0b14075542866aac76dbbf7dc,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -21585,6 +22000,16 @@ PrefabInstance:
       propertyPath: m_Padding.m_Bottom
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3763399442351654974, guid: f03ebce0b14075542866aac76dbbf7dc,
+        type: 3}
+      propertyPath: data
+      value: 
+      objectReference: {fileID: 6705779648777776640}
+    - target: {fileID: 4987739106745760528, guid: f03ebce0b14075542866aac76dbbf7dc,
+        type: 3}
+      propertyPath: data
+      value: 
+      objectReference: {fileID: 6705779648777776640}
     - target: {fileID: 5946321842374451833, guid: f03ebce0b14075542866aac76dbbf7dc,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -21775,7 +22200,8 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5702691631851660657, guid: f03ebce0b14075542866aac76dbbf7dc, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -21930,6 +22356,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Cliff_Veins_03_Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 5963989172101894649, guid: 935c47bc0130b0a449abfe926a17a4fd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5963989172101894654, guid: 935c47bc0130b0a449abfe926a17a4fd,
         type: 3}
@@ -22135,6 +22566,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Mountain_Cave_12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929718764761056473, guid: 3f6b9801e8454a447aa3798e69a533db,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3929718764761056478, guid: 3f6b9801e8454a447aa3798e69a533db,
         type: 3}
@@ -22435,6 +22871,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Cliff_Veins_01_Green
       objectReference: {fileID: 0}
+    - target: {fileID: 6115747125607430003, guid: bf5fe1aa16feb5640ad39edf99331e9e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6887322381841477065, guid: bf5fe1aa16feb5640ad39edf99331e9e,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -22685,6 +23126,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Rock_Pile_07
       objectReference: {fileID: 0}
+    - target: {fileID: 2420691741523901898, guid: 45b1dc58188ed90488606db6ae43787b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2420691741523901899, guid: 45b1dc58188ed90488606db6ae43787b,
         type: 3}
       propertyPath: m_Enabled
@@ -22806,7 +23252,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960.23444, y: 0}
+  m_AnchoredPosition: {x: 960.2528, y: 0}
   m_SizeDelta: {x: 900, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2050567721
@@ -23128,6 +23574,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Rock_Veins_02_Red
       objectReference: {fileID: 0}
+    - target: {fileID: 6513471081550208845, guid: 4365fa31834ec534e9b3a6668f5eea0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23283,6 +23734,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Crystal_Cluster_06_Copper
+      objectReference: {fileID: 0}
+    - target: {fileID: 1461327445975149180, guid: 7a9cb6c4b8e6ce345987870889334287,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1461327445975149183, guid: 7a9cb6c4b8e6ce345987870889334287,
         type: 3}
@@ -23504,6 +23960,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Cliff_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 296504293127730207, guid: 8468cf840a4aa5e4abd420bdf3d50085,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1105270568781999781, guid: 8468cf840a4aa5e4abd420bdf3d50085,
         type: 3}
@@ -23781,6 +24242,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Rock_Pile_04 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5598848682302089097, guid: 327a1321075509e418f340e47116aea2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5598848682302089098, guid: 327a1321075509e418f340e47116aea2,
         type: 3}
       propertyPath: m_Enabled
@@ -23943,7 +24409,31 @@ MonoBehaviour:
     appropriately.'
   onOpen:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 508455143}
+        m_TargetAssemblyTypeName: TimeManager, Assembly-CSharp
+        m_MethodName: SetIsGameRunning
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508455143}
+        m_TargetAssemblyTypeName: TimeManager, Assembly-CSharp
+        m_MethodName: SetTimeScale
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onClose:
     m_PersistentCalls:
       m_Calls: []
@@ -24221,6 +24711,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 6705779648777776638}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6705779648777776640 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5702691631851660657, guid: f03ebce0b14075542866aac76dbbf7dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 6705779648777776638}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4868a84b4a10cd4ca5aa059ccbe89f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -24229,8 +24731,7 @@ SceneRoots:
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 801029526}
-  - {fileID: 361115230}
-  - {fileID: 508455144}
+  - {fileID: 545510794}
   - {fileID: 781421863}
   - {fileID: 1691818553}
   - {fileID: 98787412}

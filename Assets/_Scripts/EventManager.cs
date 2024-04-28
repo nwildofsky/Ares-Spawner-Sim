@@ -8,6 +8,7 @@ public static class EventManager
     public struct Game
     {
         public static UnityAction OnTouchSpawner;
+        public static UnityAction OnGameEnd;
     }
 
     public struct UI

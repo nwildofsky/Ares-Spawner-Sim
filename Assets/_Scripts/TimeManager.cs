@@ -8,6 +8,9 @@ public class TimeManager : MonoBehaviour
 
     private static bool isGameRunning = false;
 
+    [SerializeField]
+    private bool startGameTimeOnPlay = true;
+
     private void Awake()
     {
         GameTime = 0f;
@@ -15,12 +18,12 @@ public class TimeManager : MonoBehaviour
 
     private void Start()
     {
-        isGameRunning = true;
+        isGameRunning = startGameTimeOnPlay;
     }
 
     private void Update()
     {
-        if (!isGameRunning)
+        if (isGameRunning)
         {
             GameTime += Time.deltaTime;
         }

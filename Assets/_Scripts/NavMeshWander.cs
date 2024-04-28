@@ -43,11 +43,11 @@ public class NavMeshWander : MonoBehaviour
                 result = hit.position;
                 return true;
             }
-            Debug.Log("Missed finding an available point with random numbers");
+            //Debug.Log("Missed finding an available point with random numbers");
         }
 
         result = Vector3.zero;
-        Debug.Log("Couldn't find any point after 10 iterations");
+        //Debug.Log("Couldn't find any point after 10 iterations");
         return false;
     }
 }

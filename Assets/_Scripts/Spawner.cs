@@ -218,6 +218,10 @@ public class Spawner : MonoBehaviour, ITouchable
         agent.gameObject.SetActive(false);
 
         EventManager.UI.OnAgentCountChanged?.Invoke(data.prefabToSpawn.Type, pool.CountActive - 1);
+        if (pool.CountActive - 1 == 0)
+        {
+            EventManager.Game.OnGameEnd?.Invoke();
+        }
     }
 
     private void OnDestroyPooledObject(Agent agent)

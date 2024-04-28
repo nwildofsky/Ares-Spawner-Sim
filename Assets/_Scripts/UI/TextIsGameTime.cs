@@ -17,6 +17,6 @@ public class TextIsGameTime : MonoBehaviour
     void Update()
     {
         //text.text = TimeManager.GameTime.ToString();
-        text.text = string.Format("{0:00}:{1:00}:{2:00}", (int)TimeManager.GameTime / 60, (int)TimeManager.GameTime, (int)(TimeManager.GameTime * 100f) % 100);
+        text.text = string.Format("{0:00}:{1:00}:{2:00}", (int)TimeManager.GameTime / 60, (int)TimeManager.GameTime % 60, (int)(TimeManager.GameTime * 100f) % 100);
     }
 }

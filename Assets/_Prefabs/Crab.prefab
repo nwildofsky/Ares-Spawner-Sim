@@ -179,6 +179,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 510035b975c577a4489d1601bf0c3d4e, type: 2}
+    - target: {fileID: 8603436559295205463, guid: 54181c5e52724b5b9f062064de1efc03,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8603436559300116839, guid: 54181c5e52724b5b9f062064de1efc03,
         type: 3}
       propertyPath: m_LocalPosition.x

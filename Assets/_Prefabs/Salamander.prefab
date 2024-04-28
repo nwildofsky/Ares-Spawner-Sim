@@ -249,6 +249,11 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4927408865987286364, guid: 02fc1d12fd394a52b497e1088c46d6e8,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9001701258924167034, guid: 02fc1d12fd394a52b497e1088c46d6e8,
         type: 3}
       propertyPath: m_Controller
