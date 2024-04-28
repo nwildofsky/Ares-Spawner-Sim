@@ -76,3 +76,5 @@ crashlytics-build.properties
 /[Aa]ssets/Modern UI*
 /[Aa]ssets/PurePoly*
 /[Aa]ssets/PolygonNature*
+/[Aa]ssets/Plugins*
+/[Aa]ssets/Resources*

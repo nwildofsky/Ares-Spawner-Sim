@@ -19,7 +19,7 @@ public class NavMeshWander : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!agent.hasPath)
+        if (!agent.hasPath && !agent.isStopped)
         {
             if (FindRandomPoint(xWanderWithin.x, xWanderWithin.y, zWanderWithin.x, zWanderWithin.y, out Vector3 result))
             {

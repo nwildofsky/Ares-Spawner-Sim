@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Events;
 
 public static class EventManager
@@ -8,6 +9,7 @@ public static class EventManager
     public struct Game
     {
         public static UnityAction OnTouchSpawner;
+        public static UnityAction<NavMeshAgent> OnDeathCollision;
         public static UnityAction OnGameEnd;
     }
 

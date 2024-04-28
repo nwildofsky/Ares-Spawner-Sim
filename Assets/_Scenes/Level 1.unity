@@ -4261,6 +4261,11 @@ PrefabInstance:
       propertyPath: InitialModule.startColor.maxGradient.key1.r
       value: 0.9547169
       objectReference: {fileID: 0}
+    - target: {fileID: 7192781697568379585, guid: b02bcdc0c3b6b1c40bff01a166a5c31c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19883,9 +19888,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2134555284}
-        m_TargetAssemblyTypeName: Michsky.MUIP.ModalWindowManager, Assembly-CSharp
-        m_MethodName: Open
+      - m_Target: {fileID: 508455143}
+        m_TargetAssemblyTypeName: TimeManager, Assembly-CSharp
+        m_MethodName: SetTimeScale
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1751686336}
+        m_TargetAssemblyTypeName: SceneAPI, Assembly-CSharp
+        m_MethodName: ReloadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

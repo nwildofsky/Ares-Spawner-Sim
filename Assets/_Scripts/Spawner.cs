@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -209,6 +210,8 @@ public class Spawner : MonoBehaviour, ITouchable
         agent.gameObject.SetActive(true);
 
         EventManager.UI.OnAgentCountChanged?.Invoke(data.prefabToSpawn.Type, pool.CountActive);
+
+        agent.appearAnim?.DOPlayForward();
     }
 
     private void OnReleaseFromPool(Agent agent)
@@ -249,7 +252,16 @@ public class Spawner : MonoBehaviour, ITouchable
 
     private void DestroyAgent(Agent agent)
     {
-        pool.Release(agent);
+        agent.appearAnim?.DOPlayBackwards();
+
+        if (agent.appearAnim != null)
+        {
+            agent.appearAnim.GetTweens()[0].OnRewind(() => { pool.Release(agent); });
+        }
+        else
+        {
+            pool.Release(agent);
+        }
     }
     #endregion
 }

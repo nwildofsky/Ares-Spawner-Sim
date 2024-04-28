@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ public class Agent : MonoBehaviour
     [SerializeField]
     private AgentData data;
     private NavMeshAgent navAgent;
+    public DOTweenAnimation appearAnim;
     public AgentType Type { get => data.type; private set => data.type = value; }
     private Action<Agent> collideSpawnAction;
     private Action<Agent> collideDestroyAction;
@@ -70,6 +72,10 @@ public class Agent : MonoBehaviour
             // Collision of different agents
             else
             {
+                // Stop movement
+                StopNavigation();
+                // Trigger death animation
+                EventManager.Game.OnDeathCollision?.Invoke(navAgent);
                 // Destroy both objects
                 collideDestroyAction?.Invoke(this);
             }
@@ -92,5 +98,15 @@ public class Agent : MonoBehaviour
     public void ResetNavigation()
     {
         navAgent.ResetPath();
+    }
+
+    public void StopNavigation()
+    {
+        navAgent.isStopped = true;
+    }
+
+    public void ResumeNavigation()
+    {
+        navAgent.isStopped = false;
     }
 }
