@@ -15,13 +15,17 @@ MonoBehaviour:
   prefabToSpawn: {fileID: 7270031100374398013, guid: 6aed5ee6439e39d4ba5d97204cc78d52,
     type: 3}
   defaultPoolSize: 50
-  maxPoolSize: 100
+  maxPoolSize: 50
   maxSizeIsHardLimit: 1
   spawnOnPlay: 1
   spawnDelay: 0
   spawnTimings:
-  - 3
-  acceleratedSpawnTimings:
   - 1
-  acceleratedDuration: 7
-  acceleratedCooldown: 5
+  - 1.5
+  - 12
+  - 5
+  - 13
+  acceleratedSpawnTimings:
+  - 0.7
+  acceleratedDuration: 6
+  acceleratedCooldown: 11.5

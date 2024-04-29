@@ -19,9 +19,9 @@ MonoBehaviour:
   acceleration: 5
   stoppingDistance: 0
   autoBraking: 1
-  radius: 0.45
+  radius: 0.48
   height: 1
-  obstacleAvoidanceType: 2
+  obstacleAvoidanceType: 1
   priority: 50
   startupCollisionDelay: 3
   exitTriggerCollisionDelay: 8
