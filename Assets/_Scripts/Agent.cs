@@ -11,6 +11,7 @@ public class Agent : MonoBehaviour
 {
     [SerializeField]
     private AgentData data;
+    public float SpawnRadius { get => data.spawnRadius; }
     private NavMeshAgent navAgent;
     public DOTweenAnimation appearAnim;
     private Collider mainCollider;
@@ -18,6 +19,8 @@ public class Agent : MonoBehaviour
     private Action<Agent> collideSpawnAction;
     private Action<Agent> collideDestroyAction;
     //private bool hasCollided = true;
+    private int deathTriggerID;
+    private int createTriggerID;
     public bool ReadyToCollide { get; set; }
 
     public void SetActions(Action<Agent> spawnAction, Action<Agent> destroyAction)
@@ -44,10 +47,15 @@ public class Agent : MonoBehaviour
             navAgent.obstacleAvoidanceType = data.obstacleAvoidanceType;
             navAgent.avoidancePriority = data.priority;
         }
+
+        deathTriggerID = Animator.StringToHash("Death");
+        createTriggerID = Animator.StringToHash("Create");
     }
 
     private void OnEnable()
     {
+        // Ensure ready to collide starts as false
+        ReadyToCollide = false;
         // Initially activate collisions with a delay after instantiation
         Invoke(nameof(SetReadyToCollide), data.startupCollisionDelay);
         // Reset collider to enabled once spawned or respawned
@@ -67,8 +75,14 @@ public class Agent : MonoBehaviour
                     otherAgent.ReadyToCollide = false;
 
                     // Set new destinations for after collision
-                    ResetNavigation();
-                    otherAgent.ResetNavigation();
+                    //ResetNavigation();
+                    //otherAgent.ResetNavigation();
+                    StopNavigationForSeconds(1f);
+                    otherAgent.StopNavigationForSeconds(1f);
+
+                    // Trigger Create animation
+                    TriggerAnimationWithID(createTriggerID);
+                    otherAgent.TriggerAnimationWithID(createTriggerID);
 
                     // Spawn a new object of the same type
                     collideSpawnAction?.Invoke(this);
@@ -82,19 +96,20 @@ public class Agent : MonoBehaviour
                 // Stop movement
                 StopNavigation();
                 // Trigger death animation
-                EventManager.Game.OnDeathCollision?.Invoke(navAgent);
+                TriggerAnimationWithID(deathTriggerID);
                 // Destroy both objects
                 collideDestroyAction?.Invoke(this);
             }
-
-            ReadyToCollide = false;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        // Activate collisions again with a delay after the last collision
-        Invoke(nameof(SetReadyToCollide), data.exitTriggerCollisionDelay);
+        if (CompareTag(other.tag))
+        {
+            // Activate collisions again with a delay after the last collision
+            Invoke(nameof(SetReadyToCollide), data.exitTriggerCollisionDelay);
+        }
     }
 
     private void SetReadyToCollide()
@@ -111,5 +126,23 @@ public class Agent : MonoBehaviour
     {
         navAgent.isStopped = true;
         navAgent.velocity = Vector3.zero;
+    }
+
+    public void StopNavigationForSeconds(float seconds)
+    {
+        navAgent.isStopped = true;
+        navAgent.velocity = Vector3.zero;
+
+        Invoke(nameof(ResetNavigation), seconds);
+    }
+
+    public void ResumeNavigation()
+    {
+        navAgent.isStopped = false;
+    }
+
+    public void TriggerAnimationWithID(int id)
+    {
+        EventManager.Game.OnAgentCollision?.Invoke(navAgent, id);
     }
 }

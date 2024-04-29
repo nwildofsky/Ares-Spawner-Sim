@@ -9,7 +9,7 @@ public static class EventManager
     public struct Game
     {
         public static UnityAction OnTouchSpawner;
-        public static UnityAction<NavMeshAgent> OnDeathCollision;
+        public static UnityAction<NavMeshAgent, int> OnAgentCollision;
         public static UnityAction OnGameEnd;
     }
 

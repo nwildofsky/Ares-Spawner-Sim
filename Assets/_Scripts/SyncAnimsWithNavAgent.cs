@@ -11,31 +11,35 @@ public class SyncAnimsWithNavAgent : MonoBehaviour
     public NavMeshAgent agent;
     private Animator animator;
 
+    private int velocityHash;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
+
+        velocityHash = Animator.StringToHash("VelocityMag");
     }
 
     private void OnEnable()
     {
-        EventManager.Game.OnDeathCollision += TriggerDeath;
+        EventManager.Game.OnAgentCollision += TriggerWithID;
     }
 
     private void OnDisable()
     {
-        EventManager.Game.OnDeathCollision -= TriggerDeath;
+        EventManager.Game.OnAgentCollision -= TriggerWithID;
     }
 
     void Update()
     {
-        animator.SetFloat("VelocityMag", agent.velocity.magnitude);
+        animator.SetFloat(velocityHash, agent.velocity.magnitude);
     }
     
-    private void TriggerDeath(NavMeshAgent navAgent)
+    private void TriggerWithID(NavMeshAgent navAgent, int triggerID)
     {
         if (agent != navAgent)
             return;
 
-        animator.SetTrigger("Death");
+        animator.SetTrigger(triggerID);
     }
 }
