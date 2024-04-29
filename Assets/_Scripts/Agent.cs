@@ -6,12 +6,14 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent (typeof(Collider))]
 public class Agent : MonoBehaviour
 {
     [SerializeField]
     private AgentData data;
     private NavMeshAgent navAgent;
     public DOTweenAnimation appearAnim;
+    private Collider mainCollider;
     public AgentType Type { get => data.type; private set => data.type = value; }
     private Action<Agent> collideSpawnAction;
     private Action<Agent> collideDestroyAction;
@@ -27,6 +29,7 @@ public class Agent : MonoBehaviour
     private void Awake()
     {
         navAgent = GetComponent<NavMeshAgent>();
+        mainCollider = GetComponent<Collider>();
 
         if (data.overrideNavMeshAgentValues)
         {
@@ -43,10 +46,12 @@ public class Agent : MonoBehaviour
         }
     }
 
-    private void Start()
+    private void OnEnable()
     {
         // Initially activate collisions with a delay after instantiation
         Invoke(nameof(SetReadyToCollide), data.startupCollisionDelay);
+        // Reset collider to enabled once spawned or respawned
+        mainCollider.enabled = true;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -58,8 +63,8 @@ public class Agent : MonoBehaviour
             {
                 if (ReadyToCollide && otherAgent.ReadyToCollide)
                 {
-                    otherAgent.ReadyToCollide = false;
                     ReadyToCollide = false;
+                    otherAgent.ReadyToCollide = false;
 
                     // Set new destinations for after collision
                     ResetNavigation();
@@ -72,6 +77,8 @@ public class Agent : MonoBehaviour
             // Collision of different agents
             else
             {
+                // Disable collider to prevent further collisions while being destroyed
+                mainCollider.enabled = false;
                 // Stop movement
                 StopNavigation();
                 // Trigger death animation
@@ -103,10 +110,6 @@ public class Agent : MonoBehaviour
     public void StopNavigation()
     {
         navAgent.isStopped = true;
-    }
-
-    public void ResumeNavigation()
-    {
-        navAgent.isStopped = false;
+        navAgent.velocity = Vector3.zero;
     }
 }
