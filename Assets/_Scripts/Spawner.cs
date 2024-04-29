@@ -242,10 +242,10 @@ public class Spawner : MonoBehaviour, ITouchable
 
         // Get a random position around the area of the collision
         Vector3 spawnPos = UnityEngine.Random.onUnitSphere;
-        spawnPos.y = transform.position.y;
+        spawnPos.y = 0f;
         if (spawnPos == Vector3.zero)
             spawnPos = Vector3.right;
-        spawnPos = spawnPos.normalized * 5;
+        spawnPos = spawnPos.normalized * agent.SpawnRadius;
 
         newAgent.transform.position = agent.transform.position + spawnPos;
     }
