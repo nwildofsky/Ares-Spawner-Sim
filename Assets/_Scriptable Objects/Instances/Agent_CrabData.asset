@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5bd8588f1e4564540a5d7c6d633e96bd, type: 3}
-  m_Name: SpiderAgentData
+  m_Name: Agent_CrabData
   m_EditorClassIdentifier: 
-  type: 3
+  type: 1
   overrideNavMeshAgentValues: 1
-  speed: 5
-  angularSpeed: 90
-  acceleration: 20
+  speed: 4
+  angularSpeed: 30
+  acceleration: 5
   stoppingDistance: 0
   autoBraking: 1
   radius: 0.4
   height: 1
   obstacleAvoidanceType: 4
   priority: 50
-  startupCollisionDelay: 1
-  exitTriggerCollisionDelay: 3
+  startupCollisionDelay: 2
+  exitTriggerCollisionDelay: 5
   spawnRadius: 5

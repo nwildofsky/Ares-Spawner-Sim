@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c218f7285a82174ca6461f9100f6839, type: 3}
-  m_Name: CrabSpawnerData
+  m_Name: Spawner_CrabData
   m_EditorClassIdentifier: 
   prefabToSpawn: {fileID: 7270031100374398013, guid: 6aed5ee6439e39d4ba5d97204cc78d52,
     type: 3}

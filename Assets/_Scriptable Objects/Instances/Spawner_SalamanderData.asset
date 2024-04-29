@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c218f7285a82174ca6461f9100f6839, type: 3}
-  m_Name: SpiderSpawnerData
+  m_Name: Spawner_SalamanderData
   m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 7270031100374398013, guid: 1a42c12b6c4a7ee4695dabb8bfaad36e,
+  prefabToSpawn: {fileID: 7270031100374398013, guid: e184431f43a318140860dfb08d482813,
     type: 3}
   defaultPoolSize: 50
   maxPoolSize: 100
@@ -20,9 +20,9 @@ MonoBehaviour:
   spawnOnPlay: 1
   spawnDelay: 0
   spawnTimings:
+  - 2
   - 5
   acceleratedSpawnTimings:
   - 1
-  - 2
-  acceleratedDuration: 5
-  acceleratedCooldown: 4
+  acceleratedDuration: 7
+  acceleratedCooldown: 10
