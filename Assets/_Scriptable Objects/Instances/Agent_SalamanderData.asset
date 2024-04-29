@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   overrideNavMeshAgentValues: 1
-  speed: 5.5
+  speed: 3.5
   angularSpeed: 100
-  acceleration: 1.5
+  acceleration: 2
   stoppingDistance: 0
   autoBraking: 1
   radius: 0.4

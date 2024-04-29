@@ -20,8 +20,10 @@ MonoBehaviour:
   spawnOnPlay: 1
   spawnDelay: 0
   spawnTimings:
-  - 2
-  - 3
+  - 1.5
+  - 4
+  - 2.5
+  - 6
   acceleratedSpawnTimings:
   - 0.5
   acceleratedDuration: 3
