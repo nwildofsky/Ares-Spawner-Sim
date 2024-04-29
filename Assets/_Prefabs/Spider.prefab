@@ -151,8 +151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0aaa1aad2b23146bd818bcd2713820, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xWanderWithin: {x: -24, y: 24}
-  zWanderWithin: {x: -24, y: 24}
+  xWanderWithin: {x: -23, y: 23}
+  zWanderWithin: {x: -23, y: 23}
 --- !u!114 &7270031100374398013
 MonoBehaviour:
   m_ObjectHideFlags: 0

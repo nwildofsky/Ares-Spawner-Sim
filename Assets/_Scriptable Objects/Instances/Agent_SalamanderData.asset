@@ -14,15 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   overrideNavMeshAgentValues: 1
-  speed: 3
-  angularSpeed: 60
-  acceleration: 2
+  speed: 5.5
+  angularSpeed: 100
+  acceleration: 1.5
   stoppingDistance: 0
   autoBraking: 1
   radius: 0.4
   height: 1
-  obstacleAvoidanceType: 4
+  obstacleAvoidanceType: 1
   priority: 50
-  startupCollisionDelay: 3
-  exitTriggerCollisionDelay: 5
-  spawnRadius: 5
+  startupCollisionDelay: 4
+  exitTriggerCollisionDelay: 7
+  spawnRadius: 3
