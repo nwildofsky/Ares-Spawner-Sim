@@ -10,6 +10,7 @@ public class SpawnerData : ScriptableObject
     public int defaultPoolSize = 50;
     public int maxPoolSize = 100;
     public bool maxSizeIsHardLimit = true;  // Prevent any additional objects from being created after the max size
+    public bool instantiateOnStart = true;  // Setup the pool with inactive objects to fill up the pool's default size
 
     [Header("Spawn Timings")]
     public bool spawnOnPlay = true;

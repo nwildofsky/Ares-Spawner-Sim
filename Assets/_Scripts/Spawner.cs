@@ -15,6 +15,7 @@ public class Spawner : MonoBehaviour, ITouchable
 
     // Object pool
     private ObjectPool<Agent> _pool;
+    private bool _isPoolReady;
 
     // State
     public bool IsSpawning { get; private set; }
@@ -53,6 +54,25 @@ public class Spawner : MonoBehaviour, ITouchable
         _spawnTimer = 0f;
         _acceleratedDurationTimer = 0f;
         _acceleratedCooldownTimer = 0f;
+
+        // Should pre spawn all default objects in the pool at startup?
+        _isPoolReady = false;
+        if (_data.instantiateOnStart)
+        {
+            // References to each object are required for release
+            Agent[] startupAgents = new Agent[_data.defaultPoolSize];
+            // Create all default objects
+            for (int i = 0; i < _data.defaultPoolSize; i++)
+            {
+                startupAgents[i] = _pool.Get();
+            }
+            // Release all created objects
+            for (int i = 0; i < _data.defaultPoolSize; i++)
+            {
+                _pool.Release(startupAgents[i]);
+            }
+        }
+        _isPoolReady = true;
     }
 
     private void Update()
@@ -235,8 +255,11 @@ public class Spawner : MonoBehaviour, ITouchable
         // Set agent active
         agent.gameObject.SetActive(true);
 
-        // Update agent counts
-        EventManager.UI.OnAgentCountChanged?.Invoke(_data.prefabToSpawn.Type, _pool.CountActive);
+        // Update agent counts after startup
+        if (_isPoolReady)
+        {
+            EventManager.UI.OnAgentCountChanged?.Invoke(_data.prefabToSpawn.Type, _pool.CountActive);
+        }
 
         // Have the agent appear with an animation
         agent.AppearAnimation?.DOPlayForward();
@@ -251,14 +274,17 @@ public class Spawner : MonoBehaviour, ITouchable
         // Disable the agent
         agent.gameObject.SetActive(false);
 
-        // Update agent counts
-        // At this point pool.CountActive has not accounted for this agent yet
-        EventManager.UI.OnAgentCountChanged?.Invoke(_data.prefabToSpawn.Type, _pool.CountActive - 1);
-
-        // If the last active agent is released, end the game
-        if (_pool.CountActive - 1 == 0)
+        // Update agent counts after pool startup
+        if (_isPoolReady)
         {
-            EventManager.Game.OnGameEnd?.Invoke();
+            // At this point pool.CountActive has not accounted for this agent yet
+            EventManager.UI.OnAgentCountChanged?.Invoke(_data.prefabToSpawn.Type, _pool.CountActive - 1);
+
+            // If the last active agent is released, end the game
+            if (_pool.CountActive - 1 == 0)
+            {
+                EventManager.Game.OnGameEnd?.Invoke();
+            }
         }
     }
 
