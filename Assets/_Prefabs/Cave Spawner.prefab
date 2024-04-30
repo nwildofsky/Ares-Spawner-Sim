@@ -419,7 +419,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5252059966259816876
 Transform:
@@ -614,6 +614,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Rock_Column_02
       objectReference: {fileID: 0}
+    - target: {fileID: 97021913861941883, guid: 56ae128a01fe17a4b93c24ec1b288071,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 726029819734339777, guid: 56ae128a01fe17a4b93c24ec1b288071,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -664,6 +669,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1898351469686737838, guid: 56ae128a01fe17a4b93c24ec1b288071,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 97021913861941882, guid: 56ae128a01fe17a4b93c24ec1b288071, type: 3}
     m_RemovedGameObjects: []
@@ -684,6 +694,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5252059966259816876}
     m_Modifications:
+    - target: {fileID: 4754785261525591193, guid: 120c7059b56307448bfa1449a68f449b,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5888255148821651446, guid: 120c7059b56307448bfa1449a68f449b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -738,6 +753,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556282767952397644, guid: 120c7059b56307448bfa1449a68f449b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6556282767952397645, guid: 120c7059b56307448bfa1449a68f449b, type: 3}
@@ -929,6 +949,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Rock_Pile_06
       objectReference: {fileID: 0}
+    - target: {fileID: 7376831991354022766, guid: 86399676beee243439d06fc0c3339e4a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7859930546490868180, guid: 86399676beee243439d06fc0c3339e4a,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -994,6 +1019,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -9.133
       objectReference: {fileID: 0}
+    - target: {fileID: 9034003065900595899, guid: 86399676beee243439d06fc0c3339e4a,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7376831991354022765, guid: 86399676beee243439d06fc0c3339e4a, type: 3}
     m_RemovedGameObjects: []
@@ -1018,6 +1048,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_09
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492581652825783212, guid: 225f938ff0743ec4d960745fc27eca52,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7832093987459195158, guid: 225f938ff0743ec4d960745fc27eca52,
         type: 3}
@@ -1084,6 +1119,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 11.187
       objectReference: {fileID: 0}
+    - target: {fileID: 9005513844845812345, guid: 225f938ff0743ec4d960745fc27eca52,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7492581652825783215, guid: 225f938ff0743ec4d960745fc27eca52, type: 3}
     m_RemovedGameObjects: []
@@ -1108,6 +1148,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Cave_Small_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987797224240167302, guid: aceeb701cef0c514383438d23322ab0b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7760392796954682172, guid: aceeb701cef0c514383438d23322ab0b,
         type: 3}
@@ -1173,6 +1218,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933269180722190419, guid: aceeb701cef0c514383438d23322ab0b,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933269180722190419, guid: aceeb701cef0c514383438d23322ab0b,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6987797224240167301, guid: aceeb701cef0c514383438d23322ab0b, type: 3}
@@ -1264,6 +1319,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Rock_Pile_08
       objectReference: {fileID: 0}
+    - target: {fileID: 8043622126359842809, guid: eedbf05c425339944ba7ec75a2c01e20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403809009366806060, guid: eedbf05c425339944ba7ec75a2c01e20,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8043622126359842808, guid: eedbf05c425339944ba7ec75a2c01e20, type: 3}
     m_RemovedGameObjects: []
@@ -1339,6 +1404,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Rock_Column_05
       objectReference: {fileID: 0}
+    - target: {fileID: 3435602190947076902, guid: 5b413fb93121fee4eae428decd592105,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795770931995732723, guid: 5b413fb93121fee4eae428decd592105,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3435602190947076905, guid: 5b413fb93121fee4eae428decd592105, type: 3}
     m_RemovedGameObjects: []
@@ -1359,6 +1434,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5252059966259816876}
     m_Modifications:
+    - target: {fileID: 3588741801064910798, guid: b6bf91273eb2a4c46a80e7afe6970eaf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659446685060142093, guid: b6bf91273eb2a4c46a80e7afe6970eaf,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659446685060142093, guid: b6bf91273eb2a4c46a80e7afe6970eaf,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5828364690874330978, guid: b6bf91273eb2a4c46a80e7afe6970eaf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1414,6 +1504,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6224959538884610718, guid: b6bf91273eb2a4c46a80e7afe6970eaf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6604900913508136408, guid: b6bf91273eb2a4c46a80e7afe6970eaf,
         type: 3}
       propertyPath: m_Name
@@ -1424,10 +1519,20 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6604900913508136408, guid: b6bf91273eb2a4c46a80e7afe6970eaf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6906143972712744171, guid: b6bf91273eb2a4c46a80e7afe6970eaf,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6906143972712744171, guid: b6bf91273eb2a4c46a80e7afe6970eaf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 985483931806375975, guid: b6bf91273eb2a4c46a80e7afe6970eaf, type: 3}
@@ -1452,6 +1557,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5252059966259816876}
     m_Modifications:
+    - target: {fileID: 4754785261525591193, guid: 120c7059b56307448bfa1449a68f449b,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5888255148821651446, guid: 120c7059b56307448bfa1449a68f449b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1506,6 +1616,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_11 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556282767952397644, guid: 120c7059b56307448bfa1449a68f449b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6556282767952397645, guid: 120c7059b56307448bfa1449a68f449b, type: 3}
@@ -1612,6 +1727,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Rock_Pile_07
       objectReference: {fileID: 0}
+    - target: {fileID: 2420691741523901898, guid: 45b1dc58188ed90488606db6ae43787b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3086046551239337840, guid: 45b1dc58188ed90488606db6ae43787b,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1676,6 +1796,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.362
+      objectReference: {fileID: 0}
+    - target: {fileID: 4222399667934026783, guid: 45b1dc58188ed90488606db6ae43787b,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2420691741523901899, guid: 45b1dc58188ed90488606db6ae43787b, type: 3}
