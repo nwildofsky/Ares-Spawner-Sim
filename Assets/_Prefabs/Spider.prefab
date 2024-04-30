@@ -165,8 +165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e071b125efc0f47418fc7d21bb44a882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 6ca2195b61f4d304eb358aa946b5f4df, type: 2}
-  appearAnim: {fileID: 2004733823478830509}
+  _data: {fileID: 11400000, guid: 6ca2195b61f4d304eb358aa946b5f4df, type: 2}
+  _appearAnim: {fileID: 2004733823478830509}
 --- !u!1001 &6386380307073533525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 053d316dd1c97654c8ad5045c785ee01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 6553358289769698987}
+  _agent: {fileID: 6553358289769698987}
 --- !u!114 &2004733823478830509
 MonoBehaviour:
   m_ObjectHideFlags: 0

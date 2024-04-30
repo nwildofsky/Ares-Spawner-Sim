@@ -312,11 +312,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96ef10ec5fef1c94c84364fe7aea4c75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 854e2789d5468ab4fbbcb73e997e59b0, type: 2}
-  spawnLocation: {fileID: 1691376455371421760}
-  touchableSFX: {fileID: 4031460197601206747}
-  acceleratedSFX: {fileID: 2834921298480676841}
-  cooldownSFX: {fileID: 5570781629812797634}
+  _data: {fileID: 11400000, guid: 854e2789d5468ab4fbbcb73e997e59b0, type: 2}
+  _spawnLocation: {fileID: 1691376455371421760}
 --- !u!1 &5966640660207006705
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,6 +376,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1555828178015062860}
+  - component: {fileID: 3511647688919355292}
   m_Layer: 0
   m_Name: SFX
   m_TagString: Untagged
@@ -404,6 +402,22 @@ Transform:
   - {fileID: 2898164354545391184}
   m_Father: {fileID: 1375180758401650512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3511647688919355292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6466545518199187294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 649728717830724428358da4a82c8c12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawner: {fileID: 4043982273986618501}
+  _touchableSFX: {fileID: 4031460197601206747}
+  _acceleratedSFX: {fileID: 2834921298480676841}
+  _cooldownSFX: {fileID: 5570781629812797634}
 --- !u!1 &7192781697568379585
 GameObject:
   m_ObjectHideFlags: 0

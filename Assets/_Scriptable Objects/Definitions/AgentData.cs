@@ -1,14 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+// Contains all data which defines an agent's identity and its modifiable parameters
 [CreateAssetMenu(fileName = "TestAgentData", menuName = "ScriptObj/AgentData")]
 public class AgentData : ScriptableObject
 {
     [Header("Type")]
     public AgentType type = AgentType.Bat;
 
+    // Give the option to also adjust the agent's NavMeshAgent movement values in this ScriptableObject
     [Header("Custom Movement Values")]
     public bool overrideNavMeshAgentValues = true;
     [Tooltip("Maximum movement speed when following a path")]

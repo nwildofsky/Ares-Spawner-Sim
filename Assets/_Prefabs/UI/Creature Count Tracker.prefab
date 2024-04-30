@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -145.24, y: 0.00001502}
-  m_SizeDelta: {x: 94.8728, y: 60}
+  m_SizeDelta: {x: 98.5493, y: 60}
   m_Pivot: {x: 0.00000015180558, y: 0.5}
 --- !u!222 &3228567290363363441
 CanvasRenderer:
@@ -270,12 +270,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de986c70514739444a1e8f62d73a6c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 0}
   type: 0
-  progressBar: {fileID: 3945059560811443658}
-  minWidth: 51.3231
-  stablePercentWidth: 193.64
-  maxWidth: 290.47
+  _progressBar: {fileID: 3945059560811443658}
+  _minWidth: 54
+  _stablePercentWidth: 193.64
+  _maxWidth: 290.47
 --- !u!225 &8830119731051729253
 CanvasGroup:
   m_ObjectHideFlags: 0

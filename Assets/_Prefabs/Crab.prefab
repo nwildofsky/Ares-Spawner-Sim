@@ -133,8 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e071b125efc0f47418fc7d21bb44a882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: e999f421a055ce24494bc4acf3daf799, type: 2}
-  appearAnim: {fileID: 3574236198255684049}
+  _data: {fileID: 11400000, guid: e999f421a055ce24494bc4acf3daf799, type: 2}
+  _appearAnim: {fileID: 3574236198255684049}
 --- !u!1 &5656494144034102003
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 053d316dd1c97654c8ad5045c785ee01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 6553358289769698987}
+  _agent: {fileID: 6553358289769698987}
 --- !u!114 &3574236198255684049
 MonoBehaviour:
   m_ObjectHideFlags: 0

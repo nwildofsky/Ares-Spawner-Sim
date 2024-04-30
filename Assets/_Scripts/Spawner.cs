@@ -1,26 +1,20 @@
 using DG.Tweening;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.Pool;
 
+// Class representing the identity of a SpawnerData object which defines how agents are
+// pooled, state changes, and behavior on touch
 public class Spawner : MonoBehaviour, ITouchable
 {
     // References
     [SerializeField]
-    private SpawnerData data;
-    public Transform spawnLocation;
-    //public MeshRenderer debugRenderer;
-    //private Material debugDefault;
-    //public Material debugAccel;
-    //public Material debugCooldown;
-    public ParticleSystem touchableSFX;
-    public ParticleSystem acceleratedSFX;
-    public ParticleSystem cooldownSFX;
+    private SpawnerData _data;
+    [SerializeField]
+    private Transform _spawnLocation;
 
     // Object pool
-    private ObjectPool<Agent> pool;
+    private ObjectPool<Agent> _pool;
 
     // State
     public bool IsSpawning { get; private set; }
@@ -28,45 +22,52 @@ public class Spawner : MonoBehaviour, ITouchable
     public bool InCooldown { get; private set; }
 
     // Timings
-    private int timingIdx;
-    private float spawnTimer;
-    private float acceleratedDurationTimer;
-    private float acceleratedCooldownTimer;
+    private int _timingIdx;                  // Which time delay to check in a list of timings
+    private float _spawnTimer;               // Timer calculating the correct time to spawn agents
+    private float _acceleratedDurationTimer; // Timer calculating the correct time to decelerate spawner
+    private float _acceleratedCooldownTimer; // Timer calculating the correct time to end the spawner's cooldown
 
+    // Initialize the object pool at the start of the scene
     private void Awake()
     {
-        pool = new ObjectPool<Agent>(CreateAgent, OnGetFromPool, OnReleaseFromPool, OnDestroyPooledObject,
-            false, data.defaultPoolSize, data.maxPoolSize);
-
-        //debugDefault = debugRenderer.material;
+        // Use defined methods for behavior when interacting with the pool
+        _pool = new ObjectPool<Agent>(CreateAgent, OnGetFromPool, OnReleaseFromPool, OnDestroyPooledObject,
+            false,                  // Don't need to check if the same agent has been released into the pool multiple times
+            _data.defaultPoolSize,   // On initialization the underlying data structure should have this much space
+                                    // By default, this many agents are not instantiated on initialization of the pool
+            _data.maxPoolSize);      // Limit of how many agents can be held inside of the underlying data structure after resizing
+                                    // By default, more agents than this can be instantiated but will be destroyed on release
     }
 
     private void Start()
     {
-        if (data.spawnOnPlay)
+        // Should start spawning at the start of the scene?
+        if (_data.spawnOnPlay)
         {
             IsSpawning = true;
-            touchableSFX.Play();
+            EventManager.SpawnerEvent.OnResetState(this);
         }
 
-        timingIdx = 0;
-        spawnTimer = 0f;
-        acceleratedDurationTimer = 0f;
-        acceleratedCooldownTimer = 0f;
+        // Initial timing values
+        _timingIdx = 0;
+        _spawnTimer = 0f;
+        _acceleratedDurationTimer = 0f;
+        _acceleratedCooldownTimer = 0f;
     }
 
     private void Update()
     {
-        // Start spawning after a delay
-        if (!IsSpawning && data.spawnDelay > 0f)
+        // Start spawning after a delay, if not already active
+        if (!IsSpawning && _data.spawnDelay > 0f)
         {
-            if (spawnTimer > data.spawnDelay)
+            // Use the spawn timer to check for the delay, then reset it for spawning
+            if (_spawnTimer > _data.spawnDelay)
             {
                 IsSpawning = true;
-                spawnTimer = 0f;
-                touchableSFX.Play();
+                _spawnTimer = 0f;
+                EventManager.SpawnerEvent.OnResetState(this);
             }
-            spawnTimer += Time.deltaTime;
+            _spawnTimer += Time.deltaTime;
         }
 
         if (IsSpawning)
@@ -74,12 +75,12 @@ public class Spawner : MonoBehaviour, ITouchable
             // Spawn objects at the specified intervals
             if (!IsAccelerated)
             {
-                SpawnWhenReady(data.spawnTimings);
+                SpawnWhenReady(_data.spawnTimings);
             }
             // Spawn objects at sped up intervals
             else if (IsAccelerated)
             {
-                SpawnWhenReady(data.acceleratedSpawnTimings);
+                SpawnWhenReady(_data.acceleratedSpawnTimings);
 
                 // Stop accelerated spawning after its duration is up
                 DecelerateAfterTimer();
@@ -94,173 +95,230 @@ public class Spawner : MonoBehaviour, ITouchable
     }
 
     #region State machine control and timer relevant methods
-    private void SpawnWhenReady(List<float> timings)
-    {
-        if (spawnTimer > timings[timingIdx])
-        {
-            Spawn(timings);
-        }
-        spawnTimer += Time.deltaTime;
-    }
-
+    // Spawns an agent by getting one from the pool
     private void Spawn(List<float> timings)
     {
+        // Leave early on wrong state
         if (!IsSpawning)
             return;
 
         PoolGetWithinLimit();
 
-        spawnTimer = 0f;
-        timingIdx = (timingIdx + 1) % timings.Count;
+        // Reset timer and index for next spawn time
+        _spawnTimer = 0f;
+        _timingIdx = (_timingIdx + 1) % timings.Count;
     }
 
+    // Prepares the spawner to use faster spawn timings
     public void Accelerate()
     {
+        // Leave early on wrong state
+        if (!IsSpawning)
+            return;
+
         if (InCooldown)
             return;
 
+        if (IsAccelerated)
+            return;
+
+        // Change state to accelerated and reset spawn timer and index
         IsAccelerated = true;
-        spawnTimer = 0f;
-        timingIdx = 0;
-        acceleratedCooldownTimer = 0f;
+        _spawnTimer = 0f;
+        _timingIdx = 0;
 
-        //debugRenderer.material = debugAccel;
-        acceleratedSFX.Play();
-        touchableSFX.Stop();
+        EventManager.SpawnerEvent.OnAccelerate(this);
     }
 
-    private void DecelerateAfterTimer()
-    {
-        if (acceleratedDurationTimer > data.acceleratedDuration)
-        {
-            Decelerate();
-        }
-        acceleratedDurationTimer += Time.deltaTime;
-    }
-
+    // Sets the spawner back to regular spawn timings and begins cooldown
     public void Decelerate()
     {
+        // Leave early on wrong state
+        if (!IsSpawning)
+            return;
+
+        if (InCooldown)
+            return;
+
         if (!IsAccelerated)
             return;
 
+        // Change state back to non-accelerated, start cooldown, and reset spawn timer and index
         IsAccelerated = false;
         InCooldown = true;
-        spawnTimer = 0f;
-        timingIdx = 0;
-        acceleratedDurationTimer = 0f;
+        _spawnTimer = 0f;
+        _timingIdx = 0;
+        // Acceleration guaranteed to be finished, reset timer so it can be used again
+        _acceleratedDurationTimer = 0f;
 
-        //debugRenderer.material = debugCooldown;
-        cooldownSFX.Play();
-        acceleratedSFX.Stop();
+        EventManager.SpawnerEvent.OnBeginCooldown(this);
     }
 
-    private void EndCooldownAfterTimer()
-    {
-        if (acceleratedCooldownTimer > data.acceleratedCooldown)
-        {
-            EndCooldown();
-        }
-        acceleratedCooldownTimer += Time.deltaTime;
-    }
-
+    // Sets the spawner back to default state where it can be accelerated again
     public void EndCooldown()
     {
+        // Leave early on wrong state
+        if (!IsSpawning)
+            return;
+
+        if (IsAccelerated)
+            return;
+
         if (!InCooldown)
             return;
 
+        // Stops cooldown, spawn timer does not need to be reset
         InCooldown = false;
-        acceleratedCooldownTimer = 0f;
+        // Reset cooldown timer so it can be used again
+        _acceleratedCooldownTimer = 0f;
 
-        //debugRenderer.material = debugDefault;
-        touchableSFX.Play();
-        cooldownSFX.Stop();
+        EventManager.SpawnerEvent.OnResetState(this);
+    }
+
+    // For use in Update
+    // Trigger a spawn when the spawn timer has reached the next spawn delay
+    private void SpawnWhenReady(List<float> timings)
+    {
+        if (_spawnTimer > timings[_timingIdx])
+        {
+            Spawn(timings);
+        }
+        _spawnTimer += Time.deltaTime;
+    }
+
+    // For use in Update
+    // Stop acceleration after the duration timer has reached the duration delay
+    private void DecelerateAfterTimer()
+    {
+        if (_acceleratedDurationTimer > _data.acceleratedDuration)
+        {
+            Decelerate();
+        }
+        _acceleratedDurationTimer += Time.deltaTime;
+    }
+
+    // For use in Update
+    // Stop cooldown after the cooldown timer has reached the duration delay
+    private void EndCooldownAfterTimer()
+    {
+        if (_acceleratedCooldownTimer > _data.acceleratedCooldown)
+        {
+            EndCooldown();
+        }
+        _acceleratedCooldownTimer += Time.deltaTime;
     }
     #endregion
 
     #region Event Handlers
+    // Attempt to accelerate this spawner once a touch has been confirmed on it
     public void HandleTouch()
     {
         Accelerate();
-
-        Debug.Log($"{this.name} was touched!");
-
-        EventManager.Game.OnTouchSpawner?.Invoke();
     }
     #endregion
 
     #region Object pool functions
-    private Agent PoolGetWithinLimit()
-    {
-        if (data.maxSizeIsHardLimit && pool.CountActive >= data.maxPoolSize)
-            return null;
-
-        return pool.Get();
-    }
-
+    // Called when an object is needed and there are no inactive objects to get
     private Agent CreateAgent()
     {
-        Agent agent = Instantiate(data.prefabToSpawn, spawnLocation.position, spawnLocation.rotation);
+        // Creates a new agent at the spawn location
+        Agent agent = Instantiate(_data.prefabToSpawn, _spawnLocation.position, _spawnLocation.rotation);
+        // Set its pool behavior on collision
         agent.SetActions(CreateAgentFromCollision, DestroyAgent);
 
         return agent;
     }
 
+    // Called every time an object is asked for from the pool
     private void OnGetFromPool(Agent agent)
     {
+        // Set agent active
         agent.gameObject.SetActive(true);
 
-        EventManager.UI.OnAgentCountChanged?.Invoke(data.prefabToSpawn.Type, pool.CountActive);
+        // Update agent counts
+        EventManager.UI.OnAgentCountChanged?.Invoke(_data.prefabToSpawn.Type, _pool.CountActive);
 
-        agent.appearAnim?.DOPlayForward();
+        // Have the agent appear with an animation
+        agent.AppearAnimation?.DOPlayForward();
     }
 
+    // Called when an object is being given back to the managed pool and there is space left in the pool
     private void OnReleaseFromPool(Agent agent)
     {
-        agent.transform.position = spawnLocation.position;
-        agent.transform.rotation = spawnLocation.rotation;
+        // Reset the agent's position back to the spawn location
+        agent.transform.position = _spawnLocation.position;
+        agent.transform.rotation = _spawnLocation.rotation;
+        // Disable the agent
         agent.gameObject.SetActive(false);
 
-        EventManager.UI.OnAgentCountChanged?.Invoke(data.prefabToSpawn.Type, pool.CountActive - 1);
-        if (pool.CountActive - 1 == 0)
+        // Update agent counts
+        // At this point pool.CountActive has not accounted for this agent yet
+        EventManager.UI.OnAgentCountChanged?.Invoke(_data.prefabToSpawn.Type, _pool.CountActive - 1);
+
+        // If the last active agent is released, end the game
+        if (_pool.CountActive - 1 == 0)
         {
             EventManager.Game.OnGameEnd?.Invoke();
         }
     }
 
+    // Called when an object is being given back to the managed pool and there is no space left in the pool
     private void OnDestroyPooledObject(Agent agent)
     {
+        // Destroy the agent
         Destroy(agent.gameObject);
+    }
+
+    // Additional layer on top of pool.Get preventing additional agents to be instantiated past the max size
+    private Agent PoolGetWithinLimit()
+    {
+        // Only functional when maxSizeIsHardLimit is true
+        if (_data.maxSizeIsHardLimit && _pool.CountActive >= _data.maxPoolSize)
+            return null;
+
+        return _pool.Get();
     }
     #endregion
 
     #region Agent specific functions defined in the spawner so the agents don't have any dependency on the pool
+    // On collision of 2 similar agents, create a new agent in the general area
     private void CreateAgentFromCollision(Agent agent)
     {
+        // Grab a new agent from the pool
         Agent newAgent = PoolGetWithinLimit();
+        // Exit if no more agents can be created
         if (newAgent == null)
             return;
 
         // Get a random position around the area of the collision
+        // There is no Random.onUnitCircle, so convert onUnitSphere into the XZ plane
         Vector3 spawnPos = UnityEngine.Random.onUnitSphere;
         spawnPos.y = 0f;
+        // .normalized won't work properly on a zero vector, default to right
         if (spawnPos == Vector3.zero)
             spawnPos = Vector3.right;
+        // Use spawn radius as the distance from the collision to spawn
         spawnPos = spawnPos.normalized * agent.SpawnRadius;
 
+        // Set the new agent's position
         newAgent.transform.position = agent.transform.position + spawnPos;
     }
 
+    // On collision of 2 different agents, destroy both agents
     private void DestroyAgent(Agent agent)
     {
-        agent.appearAnim?.DOPlayBackwards();
+        // Make the agent disappear by playing the appear animation backwards
+        agent.AppearAnimation?.DOPlayBackwards();
 
-        if (agent.appearAnim != null)
+        // If agent has an animation, destroy it after the animation finishes
+        if (agent.AppearAnimation != null)
         {
-            agent.appearAnim.GetTweens()[0].OnRewind(() => { pool.Release(agent); });
+            agent.AppearAnimation.GetTweens()[0].OnRewind(() => { _pool.Release(agent); });
         }
         else
         {
-            pool.Release(agent);
+            // Give the agent back to the pool
+            _pool.Release(agent);
         }
     }
     #endregion
