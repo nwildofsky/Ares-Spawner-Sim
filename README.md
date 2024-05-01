@@ -61,6 +61,8 @@ But for the purpose of scope, I opted to keep these features instead of creating
 
 ## Performance
 ### Known Slowdowns
+- The 3D scene itself with many meshes and active assets is tough to render on mobile devices, batching or baking all the static
+meshes together would help reduce render times.
 - Large amounts of skinned mesh renderers, rigidbodies, and shadow casters in the scene cause heavy slowdowns and could use optimization.
 - ObjectPool class by default doesn't hard cap max size and doesn't initialize to default size at start. A custom implementation would
 likely be more efficient than tacking these additional features onto the class.
@@ -75,8 +77,6 @@ drive interest and imagination for a complete version of the game. Some possible
 - Players could have the ability to select multiple agents and direct their movement to a certain area.
 - Players could have more manual control of agent spawning, spawn timings, or even the ability to decrease a spawner's spawn rate.
 - More complex levels could be created with required movement pathways, instead of an open field, or varied locations of the spawners.
-
-## Multiplayer Implementation
 
 ## Assets Used
 ### Art
