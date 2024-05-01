@@ -18258,7 +18258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37dd6619ec16fb74c8e76d582351a38c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetFramerate: 121
+  _targetFramerate: -1
 --- !u!1 &1130580817
 GameObject:
   m_ObjectHideFlags: 0
@@ -23506,12 +23506,12 @@ Terrain:
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 150
+  m_DetailObjectDistance: 100
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
-  m_SplatMapDistance: 1000
+  m_SplatMapDistance: 100
   m_HeightmapMaximumLOD: 0
-  m_ShadowCastingMode: 2
+  m_ShadowCastingMode: 1
   m_DrawHeightmap: 1
   m_DrawInstanced: 1
   m_DrawTreesAndFoliage: 1
