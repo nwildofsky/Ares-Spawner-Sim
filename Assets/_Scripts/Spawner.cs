@@ -255,14 +255,14 @@ public class Spawner : MonoBehaviour, ITouchable
         // Set agent active
         agent.gameObject.SetActive(true);
 
-        // Update agent counts after startup
         if (_isPoolReady)
         {
+            // Update agent counts after startup
             EventManager.UI.OnAgentCountChanged?.Invoke(_data.prefabToSpawn.Type, _pool.CountActive);
-        }
 
-        // Have the agent appear with an animation
-        agent.AppearAnimation?.DOPlayForward();
+            // Have the agent appear with an animation
+            agent.AppearAnimation?.DOPlayForward();
+        }
     }
 
     // Called when an object is being given back to the managed pool and there is space left in the pool
