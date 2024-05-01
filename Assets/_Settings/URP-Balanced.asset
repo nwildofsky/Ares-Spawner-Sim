@@ -21,12 +21,12 @@ MonoBehaviour:
   m_DefaultRendererIndex: 0
   m_RequireDepthTexture: 0
   m_RequireOpaqueTexture: 0
-  m_OpaqueDownsampling: 1
-  m_SupportsTerrainHoles: 1
+  m_OpaqueDownsampling: 3
+  m_SupportsTerrainHoles: 0
   m_SupportsHDR: 1
   m_HDRColorBufferPrecision: 0
   m_MSAA: 1
-  m_RenderScale: 1
+  m_RenderScale: 0.75
   m_UpscalingFilter: 0
   m_FsrOverrideSharpness: 0
   m_FsrSharpness: 0.92
@@ -45,12 +45,12 @@ MonoBehaviour:
   m_AdditionalLightsShadowResolutionTierHigh: 512
   m_ReflectionProbeBlending: 0
   m_ReflectionProbeBoxProjection: 0
-  m_ShadowDistance: 120
+  m_ShadowDistance: 100
   m_ShadowCascadeCount: 2
-  m_Cascade2Split: 0.4166667
+  m_Cascade2Split: 0.29999998
   m_Cascade3Split: {x: 0.33333334, y: 0.6666667}
   m_Cascade4Split: {x: 0.067, y: 0.2, z: 0.467}
-  m_CascadeBorder: 0.0625
+  m_CascadeBorder: 0
   m_ShadowDepthBias: 1
   m_ShadowNormalBias: 1
   m_AnyShadowsSupported: 1
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_LocalShadowsAtlasResolution: 256
   m_MaxPixelLights: 0
   m_ShadowAtlasResolution: 256
-  m_VolumeFrameworkUpdateMode: 0
+  m_VolumeFrameworkUpdateMode: 1
   m_Textures:
     blueNoise64LTex: {fileID: 2800000, guid: e3d24661c1e055f45a7560c033dbb837, type: 3}
     bayerMatrixTex: {fileID: 2800000, guid: f9ee4ed84c1d10c49aabb9b210b0fc44, type: 3}
@@ -88,17 +88,17 @@ MonoBehaviour:
   m_PrefilterXRKeywords: 1
   m_PrefilteringModeForwardPlus: 0
   m_PrefilteringModeDeferredRendering: 0
-  m_PrefilteringModeScreenSpaceOcclusion: 2
+  m_PrefilteringModeScreenSpaceOcclusion: 0
   m_PrefilterDebugKeywords: 1
   m_PrefilterWriteRenderingLayers: 1
   m_PrefilterHDROutput: 1
   m_PrefilterSSAODepthNormals: 1
-  m_PrefilterSSAOSourceDepthLow: 0
+  m_PrefilterSSAOSourceDepthLow: 1
   m_PrefilterSSAOSourceDepthMedium: 1
   m_PrefilterSSAOSourceDepthHigh: 1
-  m_PrefilterSSAOInterleaved: 0
+  m_PrefilterSSAOInterleaved: 1
   m_PrefilterSSAOBlueNoise: 1
-  m_PrefilterSSAOSampleCountLow: 0
+  m_PrefilterSSAOSampleCountLow: 1
   m_PrefilterSSAOSampleCountMedium: 1
   m_PrefilterSSAOSampleCountHigh: 1
   m_PrefilterDBufferMRT1: 1

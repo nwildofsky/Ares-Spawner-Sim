@@ -107,7 +107,7 @@ QualitySettings:
     terrainMaxTrees: 50
     excludedTargetPlatforms: []
   - serializedVersion: 3
-    name: High Fidelity
+    name: MyBalanced
     pixelLightCount: 2
     shadows: 2
     shadowResolution: 1
@@ -117,9 +117,9 @@ QualitySettings:
     shadowNearPlaneOffset: 3
     shadowCascade2Split: 0.33333334
     shadowCascade4Split: {x: 0.06666667, y: 0.2, z: 0.46666667}
-    shadowmaskMode: 1
-    skinWeights: 255
-    globalTextureMipmapLimit: 0
+    shadowmaskMode: 0
+    skinWeights: 2
+    globalTextureMipmapLimit: 1
     textureMipmapLimitSettings: []
     anisotropicTextures: 2
     antiAliasing: 0
