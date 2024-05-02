@@ -23,6 +23,6 @@ MonoBehaviour:
   height: 1
   obstacleAvoidanceType: 2
   priority: 50
-  startupCollisionDelay: 1.5
-  exitTriggerCollisionDelay: 2.5
+  startupCollisionDelay: 3
+  exitTriggerCollisionDelay: 7
   spawnRadius: 3
